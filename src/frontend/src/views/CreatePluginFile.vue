@@ -423,7 +423,7 @@
       } else {
         res = await api.updateFile(route.params.id, route.params.fileId, pluginFileSubmit)
       }
-      notify.success(`Sucessfully ${route.params.fileId === 'new' ? 'created' : 'updated'} '${res.data.filename}'`)
+      notify.success(`Successfully ${route.params.fileId === 'new' ? 'created' : 'updated'} '${res.data.filename}'`)
       router.push(`/plugins/${route.params.id}/files`)
     } catch(err) {
       console.log('err = ', err)
