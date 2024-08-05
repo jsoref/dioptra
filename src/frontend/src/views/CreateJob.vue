@@ -160,7 +160,7 @@
   const parameters = ref([])
   const computedValue = computed(() => {
     let output = {}
-    if(parameters.value.legnth === 0) return output
+    if(parameters.value.length === 0) return output
     parameters.value.forEach((param) => {
       output[param.name] = param.value
     })
@@ -206,7 +206,7 @@
     console.log('submitting job = ', JSON.parse(JSON.stringify(job.value)))
     try {
       await api.addJob(route.params.id, job.value)
-      notify.success(`Sucessfully created ''`)
+      notify.success(`Successfully created ''`)
     } catch(err) {
       notify.error(err.response.data.message)
     } finally {
